@@ -1,7 +1,9 @@
 def consolidate_cart(cart)
   # code here
- new_hash = Hash.new{
- cart.push("count:")
+ my_hash = {
+  :count => 1
+}
+ cart.push(my_hash)
  
 end
 
