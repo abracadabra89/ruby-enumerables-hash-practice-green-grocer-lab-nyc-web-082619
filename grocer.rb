@@ -1,7 +1,7 @@
 def consolidate_cart(cart)
   # code here
  new_hash = Hash.new
- count = 1
+ 
  
 end
 
