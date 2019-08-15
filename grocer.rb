@@ -1,10 +1,9 @@
 def consolidate_cart(cart)
   # code here
  my_hash = {
-  :count => 1
+  :count => +1
 }
  cart.push(my_hash)
- 
 end
 
 def apply_coupons(cart, coupons)
