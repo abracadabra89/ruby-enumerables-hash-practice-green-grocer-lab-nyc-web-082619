@@ -6,7 +6,7 @@ def consolidate_cart(cart)
       if hash[name].nil?
         hash[name] = price_hash.merge({:count => 1})
       else
-       # hash[name][:count] += 1
+       hash[name][:count] += 1
       end
     end
   end
@@ -17,7 +17,7 @@ def apply_coupons(cart, coupons)
   # code here
   hash = cart
   coupons.each do |coupon_hash|
-    # add coupon to cart
+     add coupon to cart
     item = coupon_hash[:item]
 
     if !hash[item].nil? && hash[item][:count] >= coupon_hash[:num]
@@ -32,7 +32,7 @@ def apply_coupons(cart, coupons)
         hash.merge!(temp)
       else
         hash["#{item} W/COUPON"][:count] += 1
-        #hash["#{item} W/COUPON"][:price] += coupon_hash[:cost]
+        hash["#{item} W/COUPON"][:price] += coupon_hash[:cost]
       end
       
       #hash[item][:count] -= coupon_hash[:num]
@@ -64,6 +64,6 @@ def checkout(cart, coupons)
     total += price_hash[:price] * price_hash[:count]
   end
   
- # total > 100 ? total * 0.9 : total
+  total > 100 ? total * 0.9 : total
   
 end
