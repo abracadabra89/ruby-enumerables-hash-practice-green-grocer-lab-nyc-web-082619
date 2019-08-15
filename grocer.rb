@@ -1,6 +1,8 @@
 def consolidate_cart(cart)
   # code here
-  New.hash
+ new_hash = Hash.new
+ count = 1
+ 
 end
 
 def apply_coupons(cart, coupons)
